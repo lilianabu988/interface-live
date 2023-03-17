@@ -67,7 +67,7 @@ function sendData(data) {
     })
     .then(response => {
       if (response.status === 200) {
-        alert('Connecting...');
+        alert('fetch sync data...');
         
       } else {
         alert('connection failed, try again');
